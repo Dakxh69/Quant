@@ -1,1 +1,48 @@
 
+# 📊 Personal Trading Data Pipeline
+
+A Python-based system that downloads historical stock data, stores it locally, and calculates key financial metrics.
+
+## 🎯 What It Does
+
+[Yahoo Finance API]
+│
+▼
+[Download Stock Data] ← Fetches historical price data
+│
+▼
+[SQLite Database] ← Stores locally for instant offline access
+│
+▼
+[Query Functions] ← Retrieve any stock, any date range
+│
+▼
+[Financial Stats] ← Returns, Volatility, Max Drawdown
+
+
+
+## 🚀 Features
+
+- **Download** historical stock data from Yahoo Finance
+- **Store** in local SQLite database (no server setup needed)
+- **Duplicate protection** — row-level insert with unique index
+- **Query** any stock for any date range instantly (offline)
+- **Calculate** key financial metrics:
+  - Total & Daily Returns
+  - Daily & Annualized Volatility
+  - Max Drawdown with worst date
+  - Best and Worst trading days
+
+## 📦 Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/YOUR_USERNAME/trading-data-pipeline.git
+cd trading-data-pipeline
+
+# Install dependencies
+pip install -r requirements.txt
+
+yfinance
+pandas
+numpy
